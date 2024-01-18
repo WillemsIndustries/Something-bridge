@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Something Bridge</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="static/style.css">
+    <script src="static/index.js"></script>
+
+</head>
+<body onload="load_data()">
+    <!-- the top bar -->
+    <div class="top_bar">
+        <label class="top_bar_text">Instellingen</label>
+    </div>
+    <!-- the main settings Boxes -->
+    <div class="innerbox">
+        <!-- the wifi settings box -->
+        <a>WIFI</a>
+        <div class="partbox">
+            <div class="buttonbox">
+                <label>Netwerk</label>
+                <select name="wifi_SSID" id="wifi_SSID">
+                  </select>
+            </div>
+            <div class="buttonbox" style="border-bottom:none;">
+                <label>Wachtwoord</label><input style="width: 220px;-webkit-text-security: disc;" autocomplete="off" type="text" id="wifi_password" spellcheck="false" placeholder="wachtwoord">
+            </div>
+        </div>
+        <a>Selecteer het wifi netwerk waar u mee wil verbinden en voer het wachtwoord in.</a><br>
+        <!-- the home assistant settings box -->
+        <a>HOME ASSISTANT</a>
+        <div class="partbox">
+            <div class="buttonbox" style="border-bottom:none;">
+                <label>Adres</label><input style="width: 220px;" type="text" id="HA_address" autocomplete="off" spellcheck="false" placeholder="homeassistant.local">
+            </div>
+        </div>
+        <a>Vul hier het ip of netwerk adres van home assistant in. Standaard is dit adres "homeassistant.local".</a>
+        <img src="/static/logo.png" class="logo">
+    </div>
+
+    <div class="bottom_bar">
+        <button onclick="save()">Opslaan en opnieuw opstarten</button>
+    </div>
+</body>
+</html>
